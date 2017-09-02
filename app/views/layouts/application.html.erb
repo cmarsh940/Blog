@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> <%= :page_title %>| Jblog</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans|Alex+Brush|Cookie|Six+Caps" rel="stylesheet">
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/60f3b29919.js"></script>
+    <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+  </head>
+
+  <body>
+		<%= render "layouts/header", page: "" %>
+
+		<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+		<%= yield %>
+
+		<%= render :partial => "layouts/footer" %>
+
+  </body>
+</html>

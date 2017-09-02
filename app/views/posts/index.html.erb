@@ -1,0 +1,59 @@
+<!-- Page Header -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto text-center">
+      <div class="site-heading">
+        <h1>PHOTOGRAPHY | <span>a blog by Jordan Marshall</span></h1>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  end-header  -->
+<!-- Main Content -->
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-sm-7">
+    <% @posts.each do |post| %>
+      <div class="row">
+        <div class="card md-4">
+          <%= link_to post_path(post) do %>
+            <%= image_tag post.image, class: 'card-img-top' %>
+            <div class="card-body">
+              <h4 class="card-title text-center"><%= post.title %></h4>
+              <p class="card-text"><%= post.overview %></p>
+              <div class="card-footer">
+                <p class="card-text"><small class="text-muted">Date posted: <%= post.created_at %></small></p>
+                <div class="text-right">
+                  <button type="button" class="btn-sm btn-primary text-right">Read more ></button>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-1"></div>
+  <div class="col-sm-3">
+    <div class="text-center">
+      <h2>Category</h2>
+    </div>
+    <div class="row">
+      <% @categories.each do |category| %>
+        <div class="list-group">
+          <button type="button" class="list-group-item justify-content-between"><a href="/categories/<%= category.id %>"><%= category.name %></a></button>
+        </div>
+      <% end %>
+    </div>
+    <div class="text-center">
+      <h2>Recent instagram post</h2>
+    </div>
+    <div class="row">
+      <div class="widget">
+        <!-- LightWidget WIDGET -->
+        <iframe src="//lightwidget.com/widgets/36d6ccba837851dba63107e8ea3961fd.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  end-content  -->

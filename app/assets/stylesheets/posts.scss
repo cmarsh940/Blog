@@ -1,0 +1,50 @@
+.site-heading {
+	margin-top:10%;
+	font-family: 'Six Caps', sans-serif;
+	border-bottom: .5px solid;
+	span {
+		font-size: 75%;
+		font-family: "Alex Brush";
+		letter-spacing: 2px;
+		vertical-align: middle;
+		margin-left: 3%;
+	}
+}
+
+
+.card {
+	margin: auto;
+	margin-top: 10%;
+	width: 100%;
+	.card-footer {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+h2 {
+	margin-top: 10%;
+	border-bottom: 1px solid lightgrey
+}
+
+.list-group {
+	width:90%;
+	margin:auto;
+}
+
+button{
+  border-radius: 0.25rem;
+  border-style: none;
+  margin: 1%;
+}
+
+.col-lg-12 {
+	margin-top:10%;
+	margin-bottom:5%;
+}
+
+.widget {
+	width:100%;
+	overflow:hidden;
+	margine-right: 2%;
+}
