@@ -16,9 +16,19 @@
 	margin: auto;
 	margin-top: 10%;
 	width: 100%;
+	.card-body{
+		text-decoration-color: #000;
+	}
 	.card-footer {
 		width: 100%;
 		margin: 0;
+		.card-text, button {
+			display: -webkit-inline-box;
+	    vertical-align: -webkit-baseline-middle;
+		}
+		button {
+			float: right;
+		}
 	}
 }
 

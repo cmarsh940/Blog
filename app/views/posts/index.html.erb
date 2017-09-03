@@ -12,7 +12,7 @@
 <!-- Main Content -->
 <div class="row">
   <div class="col-1"></div>
-  <div class="col-sm-7">
+  <div class="col-sm-6">
     <% @posts.each do |post| %>
       <div class="row">
         <div class="card md-4">
@@ -21,13 +21,12 @@
             <div class="card-body">
               <h4 class="card-title text-center"><%= post.title %></h4>
               <p class="card-text"><%= post.overview %></p>
-              <div class="card-footer">
-                <p class="card-text"><small class="text-muted">Date posted: <%= post.created_at %></small></p>
-                <div class="text-right">
-                  <button type="button" class="btn-sm btn-primary text-right">Read more ></button>
-                </div>
-              </div>
             </div>
+            <div class="card-footer">
+              <p class="card-text"><small class="text-muted">Date posted: <%= post.created_at %></small></p>
+              <button type="button" class="btn-sm btn-primary text-right">Read more ></button>
+            </div>
+
           <% end %>
         </div>
       </div>
@@ -55,5 +54,6 @@
       </div>
     </div>
   </div>
+  <div class="col-sm-1"></div>
 </div>
 <!--  end-content  -->
